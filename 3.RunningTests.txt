@@ -1,0 +1,38 @@
+You can run all your test cases at once using:
+npm test
+or
+yarn test
+
+What if you only wanted to run specific tests in a file or if you have multiple test files for multiple components and you only wanted to run tests in a particular file.
+
+Jest provides several ways to run specific tests or test files:
+
+1. Running specific tests:
+
+    a) Using test name patterns:
+        You can run specific tests by passing a regex pattern that matches the test name: npm test -- -t "name pattern"
+        For example, if you have a test named "it should add numbers correctly", you could run: npm test -- -t "add numbers"
+
+    b) Using the test.only() or it.only() function:
+        In your test file, you can use test.only() (or it.only()) to run only that specific test:
+
+        test.only('this test will be the only one that runs', () => {
+            expect(true).toBe(true);
+        });
+
+        test('this test will not run', () => {
+            expect('A').toBe('A');
+        });
+
+2. Running tests from a specific file:
+
+    a) Specify the file path:
+        You can run tests from a specific file by providing the file path to Jest: npm test -- path/to/your/test/file.test.js
+
+    b) Using Jest CLI with filename patterns:
+        Jest allows you to specify filename patterns to run only matching test files: npm test -- myComponent
+        This will run all test files with "myComponent" in their name.
+
+3. Combining both approaches:
+    You can combine file selection with test name patterns: npm test -- path/to/file.test.js -t "test pattern"
+    This runs tests matching "test pattern" in the specified file.

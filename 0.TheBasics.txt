@@ -1,0 +1,13 @@
+JEST is a unit testing framework focusing on simplicity.
+It works with projects using: Babel, TypeScript, Node, React, Angular, Vue and more!
+
+INSTALLATION
+With NPM: npm install --save-dev jest
+With YARN: yarn add --dev jest
+With PNPM: pnpm add --save-dev jest
+
+If you want to test code written in vanillaJS, there are no more dependencies, you are good to go.
+However, you need to install several other dependencies, in case of react, node or other flavours of JS.
+
+If you are using react with vite as bundler, install all these dependencies:
+npm install --save-dev jest @types/jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom

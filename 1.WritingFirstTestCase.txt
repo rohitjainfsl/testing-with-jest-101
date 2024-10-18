@@ -1,0 +1,23 @@
+Create a file sum.test.js and write the following code in it:
+
+test("two plus two is four", () => {
+  expect(2 + 2).toBe(4);
+});
+
+Add the following section to your package.json:
+
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+
+Finally, run yarn test or npm test and Jest will print this message:
+
+PASS  ./sum.test.js
+✓ adds 1 + 2 to equal 3 (5ms)
+
+You just successfully wrote your first test using Jest!
+
+This test used expect and toBe to test that two values were exactly identical. 
+To learn about the other things that Jest can test, read the file 2.JestMatchers.txt
